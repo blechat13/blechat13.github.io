@@ -11,5 +11,8 @@ header {
   object-fit: cover;
 }
 h1 {
-  position: center;
+  font-family: 'refinery-25-semi-bold', sans-serif;
+  font-size: 56px;
+  color: white;
+  margin-top: 37%;
 }
