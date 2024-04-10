@@ -1,12 +1,12 @@
 header {
   background-image: url(images/ballon.png);
-  position: fixed;
-  top: 0;
+  position: absolute;
   left: 0;
   right: 0;
-  z-index: 10;
-  padding: 25px 40px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
