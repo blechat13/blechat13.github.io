@@ -1,6 +1,7 @@
 header {
   background-image: url(images/fond_decran.png);
   position: absolute;
+  background-size: cover;
   left: 0;
   right: 0;
   top: 0;
