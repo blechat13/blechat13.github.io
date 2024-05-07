@@ -38,11 +38,11 @@ tableau {
     width: 100%;
     border-collapse: collapse;
 }
-th, td {
+tr, td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-th {
+tr {
     background-color: #f2f2f2;
 }
