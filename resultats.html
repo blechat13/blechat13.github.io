@@ -20,7 +20,32 @@
 
 <intro>
     <h2>Résultats</h2>
-    <p>Ici vous pouvez trouver les dernières actualités sur le monde du basket.</p>
+    <p>
+        <h1>Résultats des matchs de la NBA</h1>
+
+<div id="results">
+    <!-- Les résultats seront insérés ici -->
+</div>
+
+<script>
+    // Requête vers l'API pour récupérer les résultats de la NBA
+    fetch('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4387')
+        .then(response => response.json()) // Convertir la réponse en JSON
+        .then(data => {
+            const events = data.events; // Obtenir la liste des événements (matchs)
+            const resultsHTML = events.map(event => {
+                const homeTeam = event.strHomeTeam;
+                const awayTeam = event.strAwayTeam;
+                const homeScore = event.intHomeScore;
+                const awayScore = event.intAwayScore;
+                return `<p>${homeTeam} ${homeScore} - ${awayScore} ${awayTeam}</p>`;
+            }).join('');
+            document.getElementById('results').innerHTML = resultsHTML; // Afficher les résultats dans le document
+        })
+        .catch(error => console.error('Erreur lors de la récupération des résultats de la NBA :', error));
+</script>
+
+    </p>
 </intro>
 
 <bas>
